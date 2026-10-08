@@ -1,0 +1,10 @@
+const router = require('express').Router();
+const c = require('../controllers/bookingController');
+router.get('/', c.listBookings);
+router.post('/', c.createBooking);
+router.get('/:id', c.getBooking);
+router.patch('/:id', c.updateBooking);
+router.put('/:id', c.updateBooking);
+router.patch('/:id/cancel', c.cancelBooking);
+router.post('/:id/cancel', c.cancelBooking);
+module.exports = router;
